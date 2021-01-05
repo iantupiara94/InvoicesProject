@@ -16,15 +16,14 @@ import { ViewInvoice } from "./Components/Invoice/ViewInvoice";
 import { DeleteInvoice } from "./Components/Invoice/DeleteInvoice";
 
 import { GlobalProvider } from "./context/GlobalState";
+import { Container } from "reactstrap";
 function App() {
 	return (
 		<div>
 			<GlobalProvider>
 				<Router>
 					<Heading />
-					<div
-						style={{ maxWidth: "80rem", margin: "4rem auto", padding: "15px" }}
-					>
+					<Container className=".container-fluid">
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route exact path="/companies/" component={Company} />
@@ -38,7 +37,7 @@ function App() {
 							<Route path="/invoices/view/:id" component={ViewInvoice} />
 							<Route path="/invoices/delete/:id" component={DeleteInvoice} />
 						</Switch>
-					</div>
+					</Container>
 				</Router>
 			</GlobalProvider>
 		</div>

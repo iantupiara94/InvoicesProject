@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
-import { ListGroup, ListGroupItem, Button } from "reactstrap";
+import { ListGroup, ListGroupItem, Button, Container, Row } from "reactstrap";
 import { SearchBar } from "../SearchBar";
 
 export const CompanyList = () => {
@@ -29,33 +29,37 @@ export const CompanyList = () => {
 		return filteredCompanies.map((company) => {
 			return (
 				<ListGroupItem key={company.id} className="d-flex">
-					<div>
-						<strong className="mr-2"> {company.name}</strong>
-						<div className="item"> {company.city}</div>
-					</div>
-					<div className="ml-auto">
-						<Link
-							to={`/companies/view/${company.id}`}
-							className="mr-2 btn btn-primary"
-						>
-							View
-						</Link>
-						<Link
-							to={`/companies/edit/${company.id}`}
-							className="btn btn-warning"
-						>
-							Edit
-						</Link>
-						<Button
-							tag={Link}
-							outline
-							to={`/companies/delete/${company.id}`}
-							color="danger"
-							className="ml-2"
-						>
-							Delete
-						</Button>
-					</div>
+					<Container>
+						<Row>
+							<div>
+								<strong className="mr-2"> {company.name}</strong>
+								<div className="item"> {company.city}</div>
+							</div>
+							<div className="ml-auto">
+								<Link
+									to={`/companies/view/${company.id}`}
+									className="mr-2 btn btn-primary"
+								>
+									View
+								</Link>
+								<Link
+									to={`/companies/edit/${company.id}`}
+									className="btn btn-warning"
+								>
+									Edit
+								</Link>
+								<Button
+									tag={Link}
+									outline
+									to={`/companies/delete/${company.id}`}
+									color="danger"
+									className="ml-2"
+								>
+									Delete
+								</Button>
+							</div>
+						</Row>
+					</Container>
 				</ListGroupItem>
 			);
 		});
