@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Components/Home.css"],"names":[],"mappings":"AAAA,GACC,0BACD,CACA,GACC,0BACD,CACA,EACC,gBAAiB,CACjB,4BACD","file":"main.1887eae6.chunk.css","sourcesContent":["h1 {\r\n\tfont-size: 2.4rem !important;\r\n}\r\nh5 {\r\n\tfont-size: 1.6rem !important;\r\n}\r\np {\r\n\tfont-size: 1.4rem;\r\n\tline-height: 2.6rem !important;\r\n}\r\n"]}
