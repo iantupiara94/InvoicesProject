@@ -25,17 +25,19 @@ function App() {
 					<Heading />
 					<Container className=".container-fluid">
 						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route exact path="/companies/" component={Company} />
-							<Route path="/companies/add" component={AddCompany} />
-							<Route path="/companies/edit/:id" component={EditCompany} />
-							<Route path="/companies/view/:id" component={ViewCompany} />
-							<Route path="/companies/delete/:id" component={DeleteCompany} />
-							<Route exact path="/invoices/" component={Invoice} />
-							<Route path="/invoices/add" component={AddInvoice} />
-							<Route path="/invoices/edit/:id" component={EditInvoice} />
-							<Route path="/invoices/view/:id" component={ViewInvoice} />
-							<Route path="/invoices/delete/:id" component={DeleteInvoice} />
+							<div className="mt-5">
+								<Route exact path="/InvoicesProject/" component={Home} />
+								<Route exact path="/companies/" component={Company} />
+								<Route path="/companies/add" component={AddCompany} />
+								<Route path="/companies/edit/:id" component={EditCompany} />
+								<Route path="/companies/view/:id" component={ViewCompany} />
+								<Route path="/companies/delete/:id" component={DeleteCompany} />
+								<Route exact path="/invoices/" component={Invoice} />
+								<Route path="/invoices/add" component={AddInvoice} />
+								<Route path="/invoices/edit/:id" component={EditInvoice} />
+								<Route path="/invoices/view/:id" component={ViewInvoice} />
+								<Route path="/invoices/delete/:id" component={DeleteInvoice} />
+							</div>
 						</Switch>
 					</Container>
 				</Router>

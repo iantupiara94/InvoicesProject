@@ -13,7 +13,7 @@ export const Heading = () => {
 		<div>
 			<Navbar color="light">
 				<Container>
-					<NavbarBrand tag={Link} to="/">
+					<NavbarBrand tag={Link} to="/InvoicesProject/">
 						<strong>Invoices Application</strong>
 					</NavbarBrand>
 					<Nav>
